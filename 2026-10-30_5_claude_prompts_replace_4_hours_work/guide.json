@@ -1,0 +1,17 @@
+{
+ "slug": "2026-10-30_5_claude_prompts_replace_4_hours_work",
+ "date": "2026-10-30",
+ "title": "The 5-in-1 Autonomous Work System Pack",
+ "subtitle": "Five copy-paste Claude systems for research, email, spreadsheets, meetings and content.",
+ "tags": [
+  "Claude Systems",
+  "No-Code Automation"
+ ],
+ "tools": [
+  "Claude",
+  "Google Sheets",
+  "Gmail"
+ ],
+ "keyword": "SYSTEM",
+ "prompts": 5
+}

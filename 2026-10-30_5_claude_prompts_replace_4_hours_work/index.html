@@ -1,0 +1,127 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The 5-in-1 Autonomous Work System Pack</title><meta name="description" content="Five copy-paste Claude systems for research, email, spreadsheets, meetings and content."><style>
+:root{--bg:#f7f7fb;--panel:#ffffff;--ink:#0f172a;--muted:#5b6478;--line:#e3e6ef;--indigo:#4f46e5;--amber:#b45309;--green:#16a34a;--chip:#eef0fb;
+--sans:Inter,ui-sans-serif,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--mono:"JetBrains Mono","Cascadia Code",Consolas,ui-monospace,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0a0d14;--panel:#121725;--ink:#f1f5f9;--muted:#9aa4b8;--line:#232b3d;--indigo:#a5b4fc;--amber:#fbbf24;--green:#4ade80;--chip:#1b2236;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0a0d14;--panel:#121725;--ink:#f1f5f9;--muted:#9aa4b8;--line:#232b3d;--indigo:#a5b4fc;--amber:#fbbf24;--green:#4ade80;--chip:#1b2236;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans)}
+a{color:var(--indigo)}.wrap{max-width:780px;margin:0 auto;padding:0 18px 80px}
+.banner{position:sticky;top:0;z-index:5;background:#4f46e5;color:#fff;text-align:center;font-weight:700;font-size:14px;padding:10px 14px}
+.banner a{color:#fff}.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0 4px;gap:12px}
+.brand{font-weight:800;letter-spacing:.2px}.toggle{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:7px 14px;font:600 14px var(--sans);cursor:pointer}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.1;margin:18px 0 10px;letter-spacing:-.8px}h2{font-size:24px;margin:40px 0 14px;letter-spacing:-.3px}
+.sub{color:var(--muted);font-size:18px;margin:0 0 16px}.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;margin:16px 0}
+
+.card h3{margin:0 0 4px;font-size:20px}.num{display:inline-flex;width:30px;height:30px;border-radius:9px;background:#4f46e5;color:#fff;align-items:center;justify-content:center;font-weight:800;margin-right:10px;font-size:15px}
+.use{color:var(--muted);margin:0 0 12px}.prompt{font:14.5px/1.65 var(--mono);white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;margin:0;overflow-wrap:anywhere}
+.var{color:var(--indigo);font-weight:700}.var.paste{color:var(--amber)}
+.copy{margin-top:12px;width:100%;border:0;border-radius:12px;padding:13px;font:700 16px var(--sans);background:#4f46e5;color:#fff;cursor:pointer}
+.copy.done{background:#16a34a}.check{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);cursor:pointer}
+.check:first-of-type{border-top:0}.check input{width:22px;height:22px;margin-top:3px;accent-color:#16a34a}.check.on span{text-decoration:line-through;color:var(--muted)}
+.progress{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin-top:8px}.progress i{display:block;height:100%;background:#16a34a;width:0;transition:width .3s}
+ul.tips{padding-left:20px}ul.tips li{margin:8px 0}.tool{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.tool:first-child{border-top:0}
+.foot{color:var(--muted);font-size:14px;margin-top:40px;text-align:center}
+@media print{:root{--bg:#0a0d14;--panel:#121725;--ink:#f1f5f9;--muted:#9aa4b8;--line:#232b3d;--indigo:#a5b4fc;--amber:#fbbf24;--chip:#1b2236}
+*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.banner{position:static}.toggle,.copy{display:none}.card{break-inside:avoid}body{font-size:14px}}
+</style></head><body>
+<div class="banner">Built by <a href="https://instagram.com/futureintelligence.global" target="_blank" rel="noopener">@futureintelligence.global</a> · Follow on Instagram for daily AI &amp; tech systems</div>
+<div class="wrap"><div class="top"><a class="brand" href="../index.html" style="color:var(--ink);text-decoration:none">← All guides</a><button class="toggle" id="theme">◐ Theme</button></div>
+<h1>The 5-in-1 Autonomous Work System Pack</h1><p class="sub">Five copy-paste Claude systems for research, email, spreadsheets, meetings and content.</p><div class="badges"><span class="badge">⚡ 5 reusable systems</span><span class="badge">🧩 No-Code</span><span class="badge">🛠 Claude · Google Sheets · Gmail</span><span class="badge">Claude Systems</span><span class="badge">No-Code Automation</span></div>
+<h2>Setup checklist</h2><div class="card"><label class="check"><input type="checkbox" data-i="0"><span>Open Claude (claude.ai) and start a new chat, or create a Project called &quot;Work Systems&quot;.</span></label><label class="check"><input type="checkbox" data-i="1"><span>Copy one prompt from this guide and replace every [VARIABLE] with your own details.</span></label><label class="check"><input type="checkbox" data-i="2"><span>Paste your raw material (sources, email, data, transcript or content) where the prompt says [PASTE ...].</span></label><label class="check"><input type="checkbox" data-i="3"><span>Save the prompts you use weekly in the Project&#x27;s instructions so they are one click away next time.</span></label><div class="progress"><i id="bar"></i></div></div>
+<h2>The 5 copy-paste prompts</h2><p class="sub" style="font-size:16px"><span class="var">[INDIGO]</span> = fill in · <span class="var paste">[AMBER]</span> = paste your material</p>
+<div class="card"><h3><span class="num">1</span>Deep Research Synthesizer</h3><p class="use">Turn a pile of articles, reports or notes into findings you can act on.</p><pre class="prompt">You are a senior research analyst. I am researching <span class="var">[TOPIC]</span> so I can decide <span class="var">[DECISION I NEED TO MAKE]</span>.
+I will paste <span class="var">[NUMBER]</span> sources below, separated by ---.
+
+Work in this order:
+1. For each source: a 2-line summary, the author&#x27;s main claim, and credibility (high / medium / low) with one reason.
+2. Merge everything into the 5 most important findings. Label each Consensus, Contested or Single-source.
+3. List every contradiction between sources and what evidence would resolve it.
+4. Tell me what is missing: the 3 most important questions these sources do not answer.
+5. Finish with a 3-sentence recommendation for <span class="var">[DECISION I NEED TO MAKE]</span>, your confidence from 0 to 100%, and what would change your mind.
+
+Rules: quote numbers exactly as they appear in the sources, never invent statistics, and write &quot;not in sources&quot; when something is not covered.
+
+Sources:
+<span class="var paste">[PASTE SOURCES]</span></pre><button class="copy" data-i="0">Copy Prompt</button></div><div class="card"><h3><span class="num">2</span>Executive Email &amp; Negotiation Drafter</h3><p class="use">Reply to hard emails (clients, bosses, vendors, recruiters) in minutes, with a clear ask.</p><pre class="prompt">You are my chief of staff and an experienced negotiator. Draft a reply to the email below.
+
+My goal: <span class="var">[WHAT I WANT TO HAPPEN]</span>
+My walk-away point: <span class="var">[MY LIMIT]</span>
+Who they are: <span class="var">[CLIENT / BOSS / VENDOR / RECRUITER]</span>
+Tone: <span class="var">[WARM / FIRM / NEUTRAL]</span>
+
+Write 3 versions:
+A) Short: under 80 words.
+B) Standard: under 150 words.
+C) Negotiation: under 150 words, anchors high and offers exactly one trade-off.
+
+For each version give a subject line, the email, and one sentence explaining the psychology behind it.
+Then list the 2 objections they are most likely to raise, with a one-line response to each.
+
+Rules: no filler openers such as &quot;I hope this finds you well&quot;, one clear ask per email, and end with a specific next step and date.
+
+Email I received:
+<span class="var paste">[PASTE EMAIL]</span></pre><button class="copy" data-i="1">Copy Prompt</button></div><div class="card"><h3><span class="num">3</span>Spreadsheet &amp; Data Cleaner</h3><p class="use">Fix messy exports (blanks, duplicates, mixed dates) and get the insights in plain English.</p><pre class="prompt">You are a data analyst who specialises in cleaning messy spreadsheets. Below is data copied from <span class="var">[EXCEL / GOOGLE SHEETS / CSV EXPORT]</span>.
+What the data is for: <span class="var">[PURPOSE, e.g. monthly sales report]</span>
+
+Do this:
+1. Detect the columns. For each one, state its data type and every problem you see: blanks, duplicates, mixed formats, typos, outliers.
+2. Return the cleaned table as CSV in a code block: dates as YYYY-MM-DD, trimmed text, consistent capitalisation, duplicates removed, units in the header.
+3. Show a change log table: row, column, before, after, reason.
+4. Give me 3 <span class="var">[GOOGLE SHEETS / EXCEL]</span> formulas or validation rules that would prevent these problems next time.
+5. Summarise the 3 most useful insights in plain English, with the exact numbers.
+
+Rules: never delete a row without listing it in the change log, and flag anything you are unsure about instead of guessing.
+
+Data:
+<span class="var paste">[PASTE DATA]</span></pre><button class="copy" data-i="2">Copy Prompt</button></div><div class="card"><h3><span class="num">4</span>Meeting-to-Action-Plan Converter</h3><p class="use">Turn a raw transcript into decisions, owners, deadlines and a follow-up email.</p><pre class="prompt">You are an operations lead who turns messy meetings into clear plans. Below is a transcript or notes from <span class="var">[MEETING NAME]</span> on <span class="var">[DATE]</span> with <span class="var">[ATTENDEES]</span>.
+
+Produce:
+1. A 3-sentence summary a busy executive can read in 15 seconds.
+2. Decisions made, as a table: Decision | Who decided | Why.
+3. Action items, as a table: Task | Owner | Deadline | Priority (High / Med / Low). If no deadline was mentioned, propose one and mark it &quot;(proposed)&quot;.
+4. Open questions and risks nobody resolved, each with a suggested owner.
+5. A ready-to-send follow-up email to all attendees that includes the action table.
+
+Rules: only assign owners who were actually mentioned, quote numbers and dates exactly, and write &quot;unclear&quot; rather than guessing.
+
+Transcript:
+<span class="var paste">[PASTE TRANSCRIPT]</span></pre><button class="copy" data-i="3">Copy Prompt</button></div><div class="card"><h3><span class="num">5</span>7-Day Content Multiplier</h3><p class="use">Turn one blog, video or idea into a full week of posts in your own voice.</p><pre class="prompt">You are a content strategist for <span class="var">[MY NICHE]</span> creators. My audience is <span class="var">[WHO THEY ARE]</span> and they struggle with <span class="var">[THEIR PROBLEM]</span>.
+Here is one piece of content I already made:
+<span class="var paste">[PASTE BLOG / VIDEO TRANSCRIPT / NOTES]</span>
+
+Turn it into 7 days of content:
+Day 1: an Instagram Reel script (hook in the first 2 seconds, about 30 seconds long, on-screen text in <span class="var">[brackets]</span>).
+Day 2: a 7-slide carousel, copy for each slide.
+Day 3: a LinkedIn post under 200 words: one story, one lesson.
+Day 4: a 6-post Threads / X thread.
+Day 5: a newsletter section under 250 words.
+Day 6: a Stories sequence with one poll and one question sticker.
+Day 7: a second Reel that answers the comment Day 1 is most likely to get.
+
+For every day give 3 hook options and one call to action. Keep my voice: <span class="var">[3 WORDS THAT DESCRIBE MY TONE]</span>. Maximum 3 hashtags per post.</pre><button class="copy" data-i="4">Copy Prompt</button></div>
+<h2>Tools</h2><div class="card"><div class="tool"><a href="https://claude.ai" target="_blank" rel="noopener"><b>Claude</b></a><span style="color:var(--muted);text-align:right">Runs every prompt in this pack. Projects keep your best prompts reusable.</span></div><div class="tool"><a href="https://sheets.google.com" target="_blank" rel="noopener"><b>Google Sheets</b></a><span style="color:var(--muted);text-align:right">Paste the cleaned CSV from System 3 straight in.</span></div><div class="tool"><a href="https://mail.google.com" target="_blank" rel="noopener"><b>Gmail</b></a><span style="color:var(--muted);text-align:right">Use System 2&#x27;s drafts as replies; keep the subject lines.</span></div></div>
+<h2>Pro tips</h2><div class="card"><ul class="tips"><li>Give Claude the real material. A pasted transcript beats a summary of a transcript every time.</li><li>Ask for tables when you need to act, and prose when you need to persuade.</li><li>If an answer is off, reply with what is wrong instead of starting over; Claude keeps the context.</li><li>Never paste passwords, client secrets or personal data you are not allowed to share.</li></ul></div>
+<p class="foot">Free resource from @futureintelligence.global. Prompts are ready to use; check AI output before you send or act on it.</p></div>
+<script id="prompts" type="application/json">["You are a senior research analyst. I am researching [TOPIC] so I can decide [DECISION I NEED TO MAKE].\nI will paste [NUMBER] sources below, separated by ---.\n\nWork in this order:\n1. For each source: a 2-line summary, the author's main claim, and credibility (high / medium / low) with one reason.\n2. Merge everything into the 5 most important findings. Label each Consensus, Contested or Single-source.\n3. List every contradiction between sources and what evidence would resolve it.\n4. Tell me what is missing: the 3 most important questions these sources do not answer.\n5. Finish with a 3-sentence recommendation for [DECISION I NEED TO MAKE], your confidence from 0 to 100%, and what would change your mind.\n\nRules: quote numbers exactly as they appear in the sources, never invent statistics, and write \"not in sources\" when something is not covered.\n\nSources:\n[PASTE SOURCES]", "You are my chief of staff and an experienced negotiator. Draft a reply to the email below.\n\nMy goal: [WHAT I WANT TO HAPPEN]\nMy walk-away point: [MY LIMIT]\nWho they are: [CLIENT / BOSS / VENDOR / RECRUITER]\nTone: [WARM / FIRM / NEUTRAL]\n\nWrite 3 versions:\nA) Short: under 80 words.\nB) Standard: under 150 words.\nC) Negotiation: under 150 words, anchors high and offers exactly one trade-off.\n\nFor each version give a subject line, the email, and one sentence explaining the psychology behind it.\nThen list the 2 objections they are most likely to raise, with a one-line response to each.\n\nRules: no filler openers such as \"I hope this finds you well\", one clear ask per email, and end with a specific next step and date.\n\nEmail I received:\n[PASTE EMAIL]", "You are a data analyst who specialises in cleaning messy spreadsheets. Below is data copied from [EXCEL / GOOGLE SHEETS / CSV EXPORT].\nWhat the data is for: [PURPOSE, e.g. monthly sales report]\n\nDo this:\n1. Detect the columns. For each one, state its data type and every problem you see: blanks, duplicates, mixed formats, typos, outliers.\n2. Return the cleaned table as CSV in a code block: dates as YYYY-MM-DD, trimmed text, consistent capitalisation, duplicates removed, units in the header.\n3. Show a change log table: row, column, before, after, reason.\n4. Give me 3 [GOOGLE SHEETS / EXCEL] formulas or validation rules that would prevent these problems next time.\n5. Summarise the 3 most useful insights in plain English, with the exact numbers.\n\nRules: never delete a row without listing it in the change log, and flag anything you are unsure about instead of guessing.\n\nData:\n[PASTE DATA]", "You are an operations lead who turns messy meetings into clear plans. Below is a transcript or notes from [MEETING NAME] on [DATE] with [ATTENDEES].\n\nProduce:\n1. A 3-sentence summary a busy executive can read in 15 seconds.\n2. Decisions made, as a table: Decision | Who decided | Why.\n3. Action items, as a table: Task | Owner | Deadline | Priority (High / Med / Low). If no deadline was mentioned, propose one and mark it \"(proposed)\".\n4. Open questions and risks nobody resolved, each with a suggested owner.\n5. A ready-to-send follow-up email to all attendees that includes the action table.\n\nRules: only assign owners who were actually mentioned, quote numbers and dates exactly, and write \"unclear\" rather than guessing.\n\nTranscript:\n[PASTE TRANSCRIPT]", "You are a content strategist for [MY NICHE] creators. My audience is [WHO THEY ARE] and they struggle with [THEIR PROBLEM].\nHere is one piece of content I already made:\n[PASTE BLOG / VIDEO TRANSCRIPT / NOTES]\n\nTurn it into 7 days of content:\nDay 1: an Instagram Reel script (hook in the first 2 seconds, about 30 seconds long, on-screen text in [brackets]).\nDay 2: a 7-slide carousel, copy for each slide.\nDay 3: a LinkedIn post under 200 words: one story, one lesson.\nDay 4: a 6-post Threads / X thread.\nDay 5: a newsletter section under 250 words.\nDay 6: a Stories sequence with one poll and one question sticker.\nDay 7: a second Reel that answers the comment Day 1 is most likely to get.\n\nFor every day give 3 hook options and one call to action. Keep my voice: [3 WORDS THAT DESCRIBE MY TONE]. Maximum 3 hashtags per post."]</script>
+<script>
+(function(){var r=document.documentElement,h=location.hash.slice(1);
+try{var s=localStorage.getItem('fi-theme');if(s)r.dataset.theme=s}catch(e){}
+if(h==='dark'||h==='light')r.dataset.theme=h;
+var b=document.getElementById('theme');if(b)b.onclick=function(){var d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);
+r.dataset.theme=d?'light':'dark';try{localStorage.setItem('fi-theme',r.dataset.theme)}catch(e){}}})();
+
+var P=JSON.parse(document.getElementById('prompts').textContent);
+function legacyCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';
+document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}a.remove();return ok}
+// Copy synchronously inside the click (works everywhere, never hangs on a permission prompt); async API only as backup.
+function copyText(t){if(legacyCopy(t))return Promise.resolve();
+return navigator.clipboard&&window.isSecureContext?navigator.clipboard.writeText(t):Promise.reject(new Error('clipboard unavailable'))}
+document.querySelectorAll('.copy').forEach(function(b){b.onclick=function(){copyText(P[b.dataset.i]).then(function(){b.textContent='Copied! ✓';b.classList.add('done');
+setTimeout(function(){b.textContent='Copy Prompt';b.classList.remove('done')},2200)})}});
+var KEY='fi-check-2026-10-30_5_claude_prompts_replace_4_hours_work',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+var boxes=document.querySelectorAll('.check input');function paint(){var n=0;boxes.forEach(function(x){x.parentNode.classList.toggle('on',x.checked);n+=x.checked});
+document.getElementById('bar').style.width=(100*n/boxes.length)+'%'}
+boxes.forEach(function(x){x.checked=!!st[x.dataset.i];x.onchange=function(){st[x.dataset.i]=x.checked;try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){};paint()}});paint();
+</script></body></html>
